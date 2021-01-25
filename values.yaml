@@ -1,0 +1,45 @@
+controller:
+  env:
+    - name: HTTPS_PROXY
+      value: proxy.ec1.aws.aztec.cloud.allianz:8888
+    - name: NO_PROXY
+      value: "172.0.0.0/8,127.0.0.1,localhost,.svc,.cluster.local,.internal"
+
+dex:
+  env:
+    - name: HTTPS_PROXY
+      value: proxy.ec1.aws.aztec.cloud.allianz:8888
+    - name: NO_PROXY
+      value: "172.0.0.0/8,127.0.0.1,localhost,.svc,.cluster.local,.internal"
+redis:
+  env:
+    - name: HTTPS_PROXY
+      value: proxy.ec1.aws.aztec.cloud.allianz:8888
+    - name: NO_PROXY
+      value: "172.0.0.0/8,127.0.0.1,localhost,.svc,.cluster.local,.internal"
+
+repoServer:
+  env:
+    - name: HTTPS_PROXY
+      value: proxy.ec1.aws.aztec.cloud.allianz:8888
+    - name: NO_PROXY
+      value: "172.0.0.0/8,127.0.0.1,localhost,.svc,.cluster.local,.internal"
+server:
+  extraArgs:
+    - --insecure
+  logLevel: debug
+  env:
+    - name: HTTPS_PROXY
+      value: proxy.ec1.aws.aztec.cloud.allianz:8888
+    - name: NO_PROXY
+      value: "172.0.0.0/8,127.0.0.1,localhost,.svc,.cluster.local,.internal"
+  service:
+    servicePortHttp: 8080
+configs:
+  secret:
+    argocdServerAdminPassword: $2y$12$lm1/az4MTSx9nD7vYP.NJuRQtcOUZieJuTIi2OHFAyTk.oZlyhY3O
+    argocdServerAdminPasswordMtime: "2021-01-24T10:11:12Z"
+
+#  env:
+#    - name: HTTP_PROXY
+#      value: proxy.ec1.aws.aztec.cloud.allianz:8888

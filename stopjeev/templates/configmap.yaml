@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: stopjeev
+data:
+  index.html: |
+    hello world +
